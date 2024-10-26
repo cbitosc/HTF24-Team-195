@@ -20,6 +20,8 @@
   --bona: "Bona Nova SC", serif;
   --bree: "Bree Serif", serif;
   --kavi: "Kavivanar", cursive;
+  --box-shadow1: 10px 10px 15px rgba(0, 0, 0, 0.3);
+  --color: rgb(34, 209, 34);
 }
 
 body {
@@ -28,29 +30,51 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+::-webkit-scrollbar {
+  width: 15px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+/* Hover effect on thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
 header {
   width: 100vw;
-  height: 70px;
+  height: 80px;
   position: absolute;
   position: fixed;
+  top: 0;
+  background-color: black;
+  display: flex;
+  z-index: 5;
 }
 
 nav {
   display: flex;
   align-items: center;
   color: white;
-  background-color: transparent;
 
   padding: 0px 40px;
-  padding-top: 20px;
   position: relative;
   width: 100%;
   height: 100%;
 }
 
 .left h1 {
-  font-size: 40px;
-  font-family: var(--bona);
+  font-size: 30px;
+  font-family: against;
 }
 
 .left a {
@@ -76,9 +100,13 @@ nav a {
   align-items: center;
 }
 
+.left i {
+  color: rgb(34, 209, 34);
+}
+
 .right {
   height: 100%;
-  width: 400px;
+  width: 450px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -87,23 +115,21 @@ nav a {
 section {
   height: 100vh;
   width: 100%;
-  background-color: pink;
+  border: 2px solid black;
+  padding-top: 80px;
 }
 
 #Home {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
-}
-
-.home-details {
-  margin-top: 250px;
+  align-items: center;
 }
 
 .home-details h1 {
   font-family: against;
   color: rgb(34, 209, 34);
-  font-size: 100px;
+  font-size: 110px;
 }
 
 .background-clip {
@@ -129,4 +155,226 @@ section {
   color: white;
   justify-content: center;
   font-family: var(--noto);
+}
+
+img {
+  display: block;
+}
+
+body {
+  background-color: rgba(250, 235, 215, 0.451);
+}
+
+.image {
+  height: 300px;
+  width: 300px;
+  border-radius: 30px;
+  padding-bottom: 30px;
+}
+
+.image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+  transition: all ease-in-out 0.4s;
+}
+
+.image img:hover {
+  transform: scale(1.1);
+}
+
+.section {
+  display: flex;
+  gap: 2rem;
+  /* border: 2px solid red; */
+  margin: 1rem;
+  justify-content: space-between;
+  padding: 20px;
+
+  /* border-radius: 100px; */
+}
+
+.recipe {
+  /* border: 2px solid black; */
+  margin: 1rem;
+  background-color: rgb(135, 240, 135);
+  color: black;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  margin-bottom: 30px;
+  transition: all ease-in-out 0.2s;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.even {
+  position: relative;
+  right: 0;
+}
+
+.heading {
+  padding: 1.2rem;
+  color: black;
+  font-family: var(--bona);
+  font-size: 40px;
+  text-align: center;
+}
+
+.recipe:hover {
+  transform: scale(1.02);
+}
+
+.diet {
+  padding: 2rem;
+  height: max-content;
+  background-color: white;
+  padding-top: 80px;
+}
+
+.workout {
+  padding: 10px;
+  background-color: rgb(255, 237, 240);
+}
+
+.workout h1 {
+  color: black;
+}
+
+.cards {
+  margin: 0;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  overflow-y: scroll;
+  max-height: 70vh;
+  flex-wrap: wrap;
+}
+
+.card {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+  box-shadow: var(--box-shadow1);
+  margin: 20px 10px;
+}
+
+.workh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--bona);
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.workh h1 {
+  color: black;
+}
+
+.card p {
+  margin-bottom: 30px;
+}
+
+.card a {
+  color: blue;
+}
+
+.card img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 20px 0px;
+}
+.card h2 {
+  margin-bottom: 10px;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(255, 237, 240);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 237, 240);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 237, 240);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255, 237, 240) rgb(255, 237, 240);
+}
+
+.card-btn {
+  border-radius: 40px;
+  background-color: rgb(255, 237, 240);
+  color: black;
+  border-radius: 8px;
+  padding: 5px;
+  border: 2px solid rgb(255, 237, 240);
+  text-decoration: none;
+}
+
+.card-btn:hover {
+  font-size: 15px;
+}
+
+.faq {
+  background-color: rgb(255, 237, 240);
+  color: black;
+  padding: 34px;
+}
+
+.faq h2 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.faqbox:hover {
+  background-color: white;
+  color: black;
+}
+
+.faqbox {
+  transition: all 0.5s ease-out;
+  color: white;
+  display: flex;
+  background-color: black;
+  justify-content: space-between;
+  padding: 24px;
+  max-width: 60vw;
+  margin: 20px auto;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.faqbox img {
+  color: white;
+}
+
+.extra-content {
+  display: none;
+}
+
+.extra-content.visible {
+  display: block;
+}
+#workouts {
+  height: max-content;
 }

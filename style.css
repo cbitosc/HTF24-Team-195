@@ -1,12 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&family=Pacifico&family=Spicy+Rice&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&family=Pacifico&family=Spicy+Rice&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Bree+Serif&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&family=Pacifico&family=Spicy+Rice&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Bree+Serif&family=Kavivanar&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&family=Pacifico&family=Spicy+Rice&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: against;
+  src: url(against.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   --noto: "Noto Sans", sans-serif;
+  --bona: "Bona Nova SC", serif;
+  --bree: "Bree Serif", serif;
+  --kavi: "Kavivanar", cursive;
 }
 
 body {
@@ -19,26 +32,41 @@ header {
   width: 100vw;
   height: 70px;
   position: absolute;
+  position: fixed;
 }
+
 nav {
   display: flex;
   align-items: center;
-
-  background-color: black;
   color: white;
-  position: fixed;
-  padding: 0px 20px;
+  background-color: transparent;
+
+  padding: 0px 40px;
+  padding-top: 20px;
   position: relative;
   width: 100%;
   height: 100%;
+}
+
+.left h1 {
+  font-size: 40px;
+  font-family: var(--bona);
+}
+
+.left a {
+  text-decoration: none;
+}
+
+nav span {
+  color: rgb(69, 254, 69);
 }
 nav a {
   text-decoration: none;
   color: white;
   transition: all linear 0.1s;
 }
-nav a:hover {
-  border-bottom: 2px solid white;
+.right a:hover {
+  border-bottom: 2px solid rgb(34, 209, 34);
   transform: scale(1.1);
 }
 .left {
@@ -56,12 +84,49 @@ nav a:hover {
   align-items: center;
 }
 
-main {
-  padding-top: 70px;
-}
 section {
   height: 100vh;
   width: 100%;
   background-color: pink;
-  border: 2px solid black;
+}
+
+#Home {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+}
+
+.home-details {
+  margin-top: 250px;
+}
+
+.home-details h1 {
+  font-family: against;
+  color: rgb(34, 209, 34);
+  font-size: 100px;
+}
+
+.background-clip {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+}
+.subtitle {
+  margin-top: 10px;
+  font-family: var(--bona);
+  display: flex;
+  color: white;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.hashtags {
+  margin-top: 10px;
+  display: flex;
+  color: white;
+  justify-content: center;
+  font-family: var(--noto);
 }

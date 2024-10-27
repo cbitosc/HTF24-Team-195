@@ -26,7 +26,8 @@
           <a href="#Analytics">Analytics</a>
           <a href="#Diet">Recipes</a>
           <a href="#Workouts">Workouts</a>
-          <a href="#Contact">Contact</a>
+          <!-- <a href="#Contact">Contact</a> -->
+          <a href="login.html" target="_blank">Signup</a>
         </div>
       </nav>
     </header>
@@ -48,105 +49,256 @@
           </div>
         </div>
       </section>
-      <section id="Analytics"></section>
+      <section id="Analytics">
+        <div class="analyticsh">
+          <h1>ANALYTICS</h1>
+        </div>
+
+        <div class="step-counter">
+          <div>
+            <h3>Enter Today's Step Goal and Steps Taken:</h3>
+          </div>
+          <div>
+            <label for="stepGoal">Step Goal:</label>
+            <input
+              type="number"
+              id="stepGoal"
+              placeholder="Enter today's step goal" />
+          </div>
+          <div>
+            <label for="stepsTaken">Steps Taken:</label>
+            <input
+              type="number"
+              id="stepsTaken"
+              placeholder="Enter steps taken today" />
+          </div>
+          <div>
+            <button onclick="updateStepsChart()">Enter</button>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="chart-card">
+            <h2>Steps Goal Progress</h2>
+            <canvas id="stepsPieChart"></canvas>
+          </div>
+          <div class="bar-charts">
+            <div class="chart-card">
+              <h2>Steps Tracker</h2>
+              <canvas id="stepsBarChart"></canvas>
+            </div>
+            <div class="chart-card">
+              <h2>Calories Tracker</h2>
+              <canvas id="caloriesBarChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section id="Diet" class="diet">
-        <div class="recipe-1 recipe">
-          <div class="heading">
-            <h2>CHICKEN</h2>
+        <div class="recipes-header">
+          <div class="recipeh">
+            <h1>RECIPES</h1>
           </div>
 
-          <div class="section">
-            <div class="img-1 image">
-              <img src="/HTF24-Team-195/images/chicken.jpeg" alt="" />
+          <div class="foodtype">
+            <a href="#Non-veg">Non-veg</a>
+            <a href="#Veg">Veg</a>
+          </div>
+        </div>
+        <div id="Non-veg">
+          <div class="nonh"><h1>NON_VEG</h1></div>
+          <div class="recipe-1 recipe">
+            <div class="heading">
+              <h2>CHICKEN</h2>
             </div>
 
-            <div class="description">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-                rem ea voluptates incidunt nemo impedit velit illo deserunt,
-                delectus provident.
-              </p>
+            <div class="section">
+              <div class="img-1 image">
+                <img src="/HTF24-Team-195/images/grilledchiclen.jpeg" alt="" />
+              </div>
+
+              <div class="description">
+                <ul>
+                  <li>
+                    Meal Section: Grilled Chicken Breast Estimated Preparation
+                  </li>
+                  <li>
+                    Time: 20 minutes Nutritional Value (per 100g): Calories: 165
+                  </li>
+                  <li>Protein: 31g Carbohydrates: 0g Fats: 3.6g Dietary</li>
+                  <li>Considerations: High protein, low carb, gluten-free</li>
+                  <li>
+                    <a
+                      href="https://youtu.be/s13rTGimsWg?si=t3IsaIGkQ9Gqp7XQ"
+                      target="_blank"
+                      >recipe link</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="recipe-3 recipe">
+            <div class="heading">
+              <h2>Scrambled Eggs</h2>
+            </div>
+
+            <div class="section">
+              <div class="img-3 image">
+                <img src="/HTF24-Team-195/images/egg.jpeg" alt="" />
+              </div>
+
+              <div class="description">
+                <ul>
+                  <li>Meal Section: Scrambled Eggs</li>
+                  <li>Estimated Preparation Time: 10 minutes</li>
+                  <li>
+                    Nutritional Value (per 100g): Calories: 150, Protein: 10g,
+                    Carbohydrates: 2g, Fats: 12g
+                  </li>
+                  <li>
+                    Dietary Considerations: High protein, low carb, gluten-free
+                  </li>
+                  <li>
+                    <a
+                      href="https://youtu.be/1Pvuhs4INos?si=uAKHkEHDO3lmwYf"
+                      target="_blank"
+                      >recipe link</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="recipe-5 recipe">
+            <div class="heading">
+              <h2>Baked Salmon</h2>
+            </div>
+
+            <div class="section">
+              <div class="img-5 image even">
+                <img src="/HTF24-Team-195/images/bakedsalmon.jpeg" alt="" />
+              </div>
+
+              <div class="description">
+                <ul>
+                  <li>
+                    Meal Section: Baked Salmon Estimated Preparation Time: 25
+                  </li>
+                  <li>
+                    minutes Nutritional Value (per 100g): Calories: 206 Protein:
+                    22g
+                  </li>
+                  <li>
+                    Carbohydrates: 0g Fats: 12g Dietary Considerations: High in
+                  </li>
+                  <li>omega-3 fatty acids, gluten-free</li>
+                  <li>
+                    <a
+                      href="https://youtu.be/2uYoqclu6so?si=YIXkgC_3uor91m8w"
+                      target="_blank"
+                      >recipe link</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="recipe-2 recipe">
-          <div class="heading">
-            <h2>NUTS</h2>
-          </div>
+        <div id="Veg">
+          <div class="vegh"><h1>VEG</h1></div>
 
-          <div class="section">
-            <div class="description">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-                rem ea voluptates incidunt nemo impedit velit illo deserunt,
-                delectus provident.
-              </p>
+          <div class="recipe-4 recipe">
+            <div class="heading">
+              <h2>Vegetable Stir-Fry</h2>
             </div>
 
-            <div class="img-2 image even">
-              <img src="/HTF24-Team-195/images/nuts.jpeg" alt="" />
+            <div class="section">
+              <div class="img-4 image">
+                <img src="/HTF24-Team-195/images/Chickpea Salad.jpeg" alt="" />
+              </div>
+              <div class="description">
+                <ul>
+                  <li>Meal Section: Vegetable Stir-Fry</li>
+                  <li>Estimated Preparation Time: 15 minutes</li>
+                  <li>
+                    Nutritional Value (per 100g): Calories: 50, Protein: 2g,
+                    Carbohydrates: 10g, Fats: 1g
+                  </li>
+                  <li>Dietary Considerations: Vegan, low-calorie</li>
+                  <li>
+                    <a
+                      href="https://youtu.be/spDs_wzn8To?si=JerOqMJsuWlF6R7D"
+                      target="_blank"
+                      >recipe link</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="recipe-3 recipe">
-          <div class="heading">
-            <h2>OMLETTE</h2>
-          </div>
-
-          <div class="section">
-            <div class="img-3 image">
-              <img src="/HTF24-Team-195/images/omlete.jpeg" alt="" />
+          <div class="recipe-2 recipe">
+            <div class="heading">
+              <h2>Paneer Tikka</h2>
             </div>
 
-            <div class="description">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-                rem ea voluptates incidunt nemo impedit velit illo deserunt,
-                delectus provident.
-              </p>
+            <div class="section">
+              <div class="img-2 image even">
+                <img src="/HTF24-Team-195/images/paneer.jpeg" alt="" />
+              </div>
+              <div class="description">
+                <ul>
+                  <li>Meal Section: Paneer Tikka</li>
+                  <li>Estimated Preparation Time: 30 minutes</li>
+                  <li>
+                    Nutritional Value (per 100g): Calories: 230, Protein: 18g,
+                    Carbohydrates: 8g, Fats: 15g
+                  </li>
+                  <li>Dietary Considerations: Vegetarian, rich in calcium</li>
+                  <li>
+                    <a
+                      href="https://youtu.be/7IEnGV3OGP4?si=89w2sittPrGrmQZB"
+                      target="_blank"
+                      >recipe link</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="recipe-4 recipe">
-          <div class="heading">
-            <h2>FRUIT JUICE</h2>
-          </div>
-
-          <div class="section">
-            <div class="description">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-                rem ea voluptates incidunt nemo impedit velit illo deserunt,
-                delectus provident.
-              </p>
+          <div class="recipe-2 recipe">
+            <div class="heading">
+              <h2>Salad</h2>
             </div>
 
-            <div class="img-4 image">
-              <img src="/HTF24-Team-195/images/orangejuice.jpeg" alt="" />
-            </div>
-          </div>
-        </div>
-
-        <div class="recipe-5 recipe">
-          <div class="heading">
-            <h2>Egg Sandwich</h2>
-          </div>
-
-          <div class="section">
-            <div class="img-5 image even">
-              <img src="/HTF24-Team-195/images/spinach.jpeg" alt="" />
-            </div>
-
-            <div class="description">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-                rem ea voluptates incidunt nemo impedit velit illo deserunt,
-                delectus provident.
-              </p>
+            <div class="section">
+              <div class="img-2 image even">
+                <img src="/HTF24-Team-195/images/salad.png" alt="" />
+              </div>
+              <div class="description">
+                <ul>
+                  <li>Meal Section: Chickpea Salad</li>
+                  <li>Estimated Preparation Time: 10 minutes</li>
+                  <li>
+                    Nutritional Value (per 100g): Calories: 164, Protein: 8g,
+                    Carbohydrates: 27g, Fats: 2.6g
+                  </li>
+                  <li>Dietary Considerations: Vegan, high in fiber</li>
+                  <li>
+                    <a
+                      href="https://youtu.be/EtpwOvjCNEI?si=v1aUR0Zf-DBbVJia"
+                      target="_blank"
+                      >recipe link</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -160,12 +312,9 @@
             <div class="card">
               <img src="images/cardio.jpg" alt="" />
               <h2>Cardio Workouts</h2>
-              <p>
-                Improves heart health, boosts endurance, aids in weight
-                management.
-              </p>
+              <p>Improves heart health, aids in weight management.</p>
               <a href="exercise.html?workout=cardio" class="card-btn"
-                >Let’s Go!</a
+                >Start Workout</a
               >
             </div>
             <div class="card">
@@ -173,7 +322,7 @@
               <h2>Strength Training</h2>
               <p>Builds muscle, increases bone density, improves metabolism.</p>
               <a href="exercise.html?workout=strength" class="card-btn"
-                >Let’s Go!</a
+                >Start Workout</a
               >
             </div>
             <div class="card">
@@ -184,15 +333,15 @@
                 relaxation.
               </p>
               <a href="exercise.html?workout=flexibility" class="card-btn"
-                >Let’s Go!</a
+                >Start Workout</a
               >
             </div>
             <div class="card">
               <img src="images/HIIT.jpg" alt="" />
-              <h2>High-Intensity Interval Training</h2>
+              <h2>High-Intensity Interval</h2>
               <p>Efficient for fat loss, improves cardiovascular health.</p>
               <a href="exercise.html?workout=hiit" class="card-btn"
-                >Let’s Go!</a
+                >Start Workout</a
               >
             </div>
             <div class="card">
@@ -200,7 +349,7 @@
               <h2>Core Workouts</h2>
               <p>Strengthens the core, improves posture and balance.</p>
               <a href="exercise.html?workout=core" class="card-btn"
-                >Let’s Go!</a
+                >Start Workout</a
               >
             </div>
             <div class="card">
@@ -208,7 +357,7 @@
               <h2>Functional Training</h2>
               <p>Improves coordination and practical strength.</p>
               <a href="exercise.html?workout=functional" class="card-btn"
-                >Let’s Go!</a
+                >Start Workout</a
               >
             </div>
             <div class="card">
@@ -216,7 +365,7 @@
               <h2>Sports-Specific Training</h2>
               <p>Enhances skills relevant to specific sports.</p>
               <a href="exercise.html?workout=sports" class="card-btn"
-                >Let’s Go!</a
+                >Start Workout</a
               >
             </div>
             <div class="card">
@@ -226,7 +375,7 @@
                 Reduces stress, enhances flexibility, promotes overall wellness.
               </p>
               <a href="exercise.html?workout=yoga" class="card-btn"
-                >Let’s Go!</a
+                >Start Workout</a
               >
             </div>
           </div>
@@ -249,7 +398,28 @@
           </div>
         </div>
       </section> -->
-      <section id="Contact"></section>
     </main>
+    <footer>
+      <div class="about-us">
+        <h2>About Us</h2>
+      </div>
+
+      <div class="about-info">
+        <p>
+          Basic Fitness Tracker, we empower individuals on their fitness
+          journeys with an intuitive platform for tracking workouts, meals, and
+          progress. Our mission is to simplify health and wellness, inspiring
+          users to achieve their fitness goals and embrace a healthier
+          lifestyle.
+        </p>
+      </div>
+
+      <div id="copyright">
+        <p>Owned by © Larson Group</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
